@@ -1041,7 +1041,7 @@ body {
 
 .modal-form-check:checked + .modal-form-check-desc::before {
   background-color: var(--accent-color);
-  background-image: url(/images/svg/check-form-icon.svg);
+  background-image: url(../images/svg/check-form-icon.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-color: var(--accent-color);
