@@ -1051,6 +1051,10 @@ body {
   outline: 2px solid var(--accent-color);
 }
 
+.terms-of-contract {
+  color: var(--accent-color);
+}
+
 .modal-form-submit {
   padding: 10px 52px;
   align-self: center;
