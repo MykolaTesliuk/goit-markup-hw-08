@@ -1,0 +1,92 @@
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-section {
+  background-color: var(--btn-bg-color);
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color-theme-light);
+}
+
+.team-member {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color-theme-light);
+  padding-bottom: 10px;
+}
+
+.team-member-proffesion {
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color-theme-light);
+  margin-bottom: 16px;
+}
+
+.team-member-card-wraper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - 90px) / 4);
+  background-color: var(--primary-text-color-theme-dark);
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.team-member-item {
+  display: inline-block;
+  margin-left: 0;
+}
+
+.team-member-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: fill var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.team-member-icon {
+  fill: #afb1b8;
+  transition: fill var(--transition-dur-and-func);
+
+  &:hover,
+  &:focus {
+    fill: #ffffff;
+  }
+
+  .team-member-link:hover &,
+  .team-member-link:focus & {
+    fill: #ffffff;
+  }
+}
