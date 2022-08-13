@@ -1,7 +1,5 @@
 .regular-customers-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  @include font(36px, 700, 42px);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-light);
@@ -14,9 +12,7 @@
 }
 
 .customers-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %align;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;

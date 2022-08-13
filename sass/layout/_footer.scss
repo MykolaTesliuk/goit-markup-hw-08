@@ -9,11 +9,11 @@
   align-items: baseline;
 }
 
-.footer-contact-item:not(:last-child) {
+.footer-contact-list__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer_logo {
+.page-footer__logo {
   margin-right: 156px;
 }
 
@@ -21,19 +21,16 @@
   font-style: normal;
 }
 
-.logo-studio-footer {
+.logo__studio-footer {
   display: inline-block;
   margin-bottom: 20px;
   color: var(--primary-text-color-theme-dark);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  @include font(26px, 700, 31px);
   letter-spacing: 0.03em;
 }
 
-.footer-contact-location {
-  font-size: 14px;
-  line-height: 1.71;
+.footer-contact-list__location {
+  @include font(14px, 400, 24px);
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-dark);
   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
@@ -45,9 +42,8 @@
   }
 }
 
-.footer-contact-email {
-  font-size: 14px;
-  line-height: 1.71;
+.footer-contact-list__email {
+  @include font(14px, 400, 24px);
   letter-spacing: 0.03em;
   color: var(--footer-text-color);
   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
@@ -59,9 +55,8 @@
   }
 }
 
-.footer-contact-phone {
-  font-size: 14px;
-  line-height: 1.71;
+.footer-contact-list__phone {
+  @include font(14px, 400, 24px);
   letter-spacing: 0.03em;
   color: var(--footer-text-color);
   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
@@ -74,9 +69,7 @@
 }
 
 .join {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(14px, 700, 16px);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color-theme-dark);
@@ -89,15 +82,13 @@
   gap: 10px;
 }
 
-.footer-social-list-item {
+.footer-social-list__item {
   display: inline-block;
   margin-left: 0;
 }
 
-.footer-social-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-social-list__link {
+  @extend %align;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -110,6 +101,6 @@
   }
 }
 
-.footer-social-list-icon {
+.footer-social-list__icon {
   fill: var(--primary-text-color-theme-dark);
 }

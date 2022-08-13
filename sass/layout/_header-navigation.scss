@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-.menu-item:not(:last-child) {
+.menu__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -29,20 +29,16 @@
   margin-left: auto;
 }
 
-.logo-studio-header {
+.logo__studio-header {
   color: var(--logo-text-color-light);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  @include font(26px, 700, 31px);
   letter-spacing: 0.03em;
 }
 
-.menu-link {
+.menu__link {
   padding-top: 32px;
   padding-bottom: 32px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(14px, 500, 16px);
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-light);
   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
@@ -55,7 +51,7 @@
   }
 }
 
-.menu .menu-link.current {
+.menu .menu__link.menu__link_current {
   color: var(--accent-color);
 
   &::after {

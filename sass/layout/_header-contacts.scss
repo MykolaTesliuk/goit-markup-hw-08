@@ -1,11 +1,7 @@
-.contact-phone {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+.contact__phone {
+  @include font(14px, 500, 16px);
   letter-spacing: 0.02em;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @extend %align;
   color: var(--secondary-text-color-theme-light);
   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
 
@@ -16,15 +12,11 @@
   }
 }
 
-.contact-email {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+.contact__email {
+  @include font(14px, 500, 16px);
   letter-spacing: 0.02em;
   margin-right: 50px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @extend %align;
   color: var(--secondary-text-color-theme-light);
   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
 
@@ -35,8 +27,8 @@
   }
 }
 
-.email-icon,
-.phone-icon {
+.contact__email-icon,
+.contact__phone-icon {
   margin-right: 10px;
   fill: currentColor;
   justify-content: center;
