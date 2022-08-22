@@ -17,66 +17,85 @@
   border-bottom: 1px solid;
   border-color: var(--border-color);
 }
-
-@media screen and (min-width: 768px) {
-  .page-header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-}
-
 .page-header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.page-nav {
-  display: flex;
-}
-
 @media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .page-nav {
+    display: flex;
+  }
+
   .menu {
     display: flex;
     align-items: center;
   }
-}
 
-.menu__item:not(:last-child) {
-  margin-right: 50px;
-}
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
 
-.menu__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  @include font(14px, 500, 16px);
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color-theme-light);
-  transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
-  position: relative;
+  .menu__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include font(14px, 500, 16px);
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-theme-light);
+    transition: color var(--transition-dur-and-func),
+      background-color var(--transition-dur-and-func);
+    position: relative;
 
-  &:hover,
-  &:focus {
-    background-color: var(--primary-text-color-theme-dark);
+    &:hover,
+    &:focus {
+      background-color: var(--primary-text-color-theme-dark);
+      color: var(--accent-color);
+    }
+  }
+
+  .menu .menu__link.menu__link_current {
     color: var(--accent-color);
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
   }
 }
+@media screen and (min-width: 1200px) {
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 
-.menu .menu__link.menu__link_current {
-  color: var(--accent-color);
+  .page-header-container {
+    display: flex;
+    align-items: center;
+  }
 
-  &::after {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    content: '';
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
+  .contact {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .logo__studio-header {
+    color: var(--logo-text-color-light);
+    @include font(26px, 700, 31px);
+    letter-spacing: 0.03em;
   }
 }
-
 // .page-header {
 //   padding-top: 24px;
 //   padding-bottom: 25px;

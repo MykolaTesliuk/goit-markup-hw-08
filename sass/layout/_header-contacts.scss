@@ -17,12 +17,12 @@
   }
 
   .contact__phone {
-    // display: flex;
-    // align-content: center;
-    // // justify-content: start;
+    display: flex;
+    align-content: center;
+    justify-content: start;
     @include font(12px, 500, 14px);
     letter-spacing: 0.02em;
-    @extend %align;
+
     color: var(--secondary-text-color-theme-light);
     transition: color var(--transition-dur-and-func),
       background-color var(--transition-dur-and-func);
@@ -35,13 +35,12 @@
   }
 
   .contact__email {
-    // display: flex;
-    // align-content: center;
-    // justify-content: start;
+    display: flex;
+    align-content: center;
+    justify-content: start;
     @include font(12px, 500, 14px);
     letter-spacing: 0.02em;
-    // margin-right: 50px;
-    @extend %align;
+
     color: var(--secondary-text-color-theme-light);
     transition: color var(--transition-dur-and-func),
       background-color var(--transition-dur-and-func);
@@ -59,39 +58,31 @@
     fill: currentColor;
   }
 }
-// .contact__phone {
-//   @include font(14px, 500, 16px);
-//   letter-spacing: 0.02em;
-//   @extend %align;
-//   color: var(--secondary-text-color-theme-light);
-//   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
 
-//   &:hover,
-//   &:focus {
-//     background-color: var(--primary-text-color-theme-dark);
-//     color: var(--accent-color);
-//   }
-// }
+@media screen and (min-width: 1200px) {
+  .contact {
+    align-items: center;
+    margin-left: auto;
+    flex-direction: row;
+  }
+  .contact__phone {
+    justify-content: center;
+    @include font(14px, 500, 16px);
+  }
 
-// .contact__email {
-//   @include font(14px, 500, 16px);
-//   letter-spacing: 0.02em;
-//   margin-right: 50px;
-//   @extend %align;
-//   color: var(--secondary-text-color-theme-light);
-//   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+  .contact__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
 
-//   &:hover,
-//   &:focus {
-//     background-color: var(--primary-text-color-theme-dark);
-//     color: var(--accent-color);
-//   }
-// }
+  .contact__email {
+    justify-content: center;
+    @include font(14px, 500, 16px);
+    margin-right: 50px;
+  }
 
-// .contact__email-icon,
-// .contact__phone-icon {
-//   margin-right: 10px;
-//   fill: currentColor;
-//   justify-content: center;
-//   align-items: center;
-// }
+  .contact__email-icon,
+  .contact__phone-icon {
+    justify-content: center;
+    align-items: center;
+  }
+}
