@@ -13,21 +13,21 @@
   margin-bottom: 9px;
 }
 
-.page-footer__logo {
-  margin-right: 156px;
-}
+// .page-footer__logo {
+//   margin-right: 156px;
+// }
 
 .footer-contact {
   font-style: normal;
 }
 
-.logo__studio-footer {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: var(--primary-text-color-theme-dark);
-  @include font(26px, 700, 31px);
-  letter-spacing: 0.03em;
-}
+// .logo__studio-footer {
+//   display: inline-block;
+//   margin-bottom: 20px;
+//   color: var(--primary-text-color-theme-dark);
+//   @include font(26px, 700, 31px);
+//   letter-spacing: 0.03em;
+// }
 
 .footer-contact-list__location {
   @include font(14px, 400, 24px);

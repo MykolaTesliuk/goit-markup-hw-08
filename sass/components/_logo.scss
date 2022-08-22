@@ -9,3 +9,25 @@
 .page-header__logo {
   margin-right: 93px;
 }
+@media screen and (min-width: 768px) {
+  .page-header__logo {
+    margin-right: 88px;
+  }
+}
+
+.logo__studio-header {
+  color: var(--logo-text-color-light);
+  @include font(26px, 700, 31px);
+  letter-spacing: 0.03em;
+}
+
+.page-footer__logo {
+  margin-right: 156px;
+}
+.logo__studio-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--primary-text-color-theme-dark);
+  @include font(26px, 700, 31px);
+  letter-spacing: 0.03em;
+}
