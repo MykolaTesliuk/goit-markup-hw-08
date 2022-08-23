@@ -137,3 +137,14 @@
     border: none;
   }
 }
+@media screen and (max-width: 1199px) {
+  .modal-form-name {
+    @include font(20px, 700, 30px);
+  }
+  .modal-form-message:placeholder {
+    @include font(14px, 400, 16px);
+  }
+  .modal-form-check-desc {
+    @include font(12px, 400, 14px);
+  }
+}
