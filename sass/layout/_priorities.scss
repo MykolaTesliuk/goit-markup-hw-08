@@ -1,6 +1,5 @@
 .priorities {
-  display: flex;
-  align-items: flex-start;
+  display: block;
 }
 
 .priorities-item::before {
@@ -12,6 +11,25 @@
   border-radius: 4px;
   margin-bottom: 30px;
   background-color: var(--btn-bg-color);
+}
+
+.priorities-title {
+  @include font(14px, 700, 16px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--primary-text-color-theme-light);
+  margin-bottom: 10px;
+}
+.priorities-description {
+  @include font(14px, 400, 24px);
+
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color-theme-light);
+}
+
+.priorities-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .icon-antenna::before {
@@ -30,24 +48,46 @@
   background-image: url(../images/svg/astronaut-icon.svg);
 }
 
-.priorities-item {
-  flex-basis: calc((100% - 90px) / 4);
+@media screen and (min-width: 768px) {
+  .priorities {
+    display: flex;
+    // align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .priorities-item {
+    flex-basis: calc((100% - 30px) / 2);
+    max-width: 354px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+      margin: 0px 30px 30px 0px;
+    }
+    &:nth-child(2n) {
+      margin-right: 0px;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
   }
 }
 
-.priorities-title {
-  @include font(14px, 700, 16px);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary-text-color-theme-light);
-  margin-bottom: 10px;
+@media screen and (min-width: 1200px) {
+  .priorities {
+    align-items: flex-start;
+  }
+  .priorities-item {
+    flex-basis: calc((100% - 90px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  .priorities-title {
+    text-align: start;
+  }
 }
 
-.priorities-description {
-  @include font(14px, 400, 24px);
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color-theme-light);
-}
+///============Формула================///
+
+// .element {
+//   flex-basis: calc((100% - кол-во маржинов в строке * значение маржина) / кол-во элементов в строке);
+// }

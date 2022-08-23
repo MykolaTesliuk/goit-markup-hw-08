@@ -1,30 +1,36 @@
-.specialization-title {
+@media screen and (max-width: 1199px) {
+  .specialization-section-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .specialization-title {
     @include font(36px, 700, 42px);
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-text-color-theme-light);
-}
+  }
 
-.specialization-section {
+  .specialization-section {
     padding-bottom: 94px;
-}
+  }
 
-.specialization {
+  .specialization {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-}
+  }
 
-.specialization-item {
+  .specialization-item {
     flex-basis: calc((100% - 60px) / 3);
-}
+  }
 
-.specialization-wrapper {
+  .specialization-wrapper {
     position: relative;
-}
+  }
 
-.specialization-name {
+  .specialization-name {
     position: absolute;
     bottom: 0;
     padding: 27px;
@@ -35,4 +41,5 @@
     text-transform: uppercase;
     color: var(--primary-text-color-theme-dark);
     background-color: rgba(47, 48, 58, 0.8);
+  }
 }
