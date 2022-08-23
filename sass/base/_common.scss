@@ -2,38 +2,36 @@ h1,
 h2,
 h3,
 p {
-    margin-top: 0;
-    margin-bottom: 0;
-    
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul,
 ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 img {
-    display: block;
-   
+  display: block;
+  max-width: 100%;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .list {
-    list-style: none;
-    margin-right: 0;
-    padding-left: 0;
+  list-style: none;
+  margin-right: 0;
+  padding-left: 0;
 }
 
 .link {
-    text-decoration: none;
-    
+  text-decoration: none;
 }
 
 body {
-    font-family: var(--primary-font);
+  font-family: var(--primary-font);
 }
