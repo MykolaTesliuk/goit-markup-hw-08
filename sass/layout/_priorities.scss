@@ -68,6 +68,9 @@
       margin-bottom: 0px;
     }
   }
+  .priorities-title {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -75,6 +78,9 @@
     align-items: flex-start;
   }
   .priorities-item {
+    &:not(:last-child) {
+      margin: 0px 0px 0px 0px;
+    }
     flex-basis: calc((100% - 90px) / 4);
 
     &:not(:last-child) {
